@@ -28,11 +28,11 @@ public void draw() {
   }
 
   if (u == true) {
-    joe.turn(4);
+    joe.turn(-4);
   }
 
   if (c == true) {
-    joe.turn(-4);
+    joe.turn(4);
   }
 
   if (k == true) {
