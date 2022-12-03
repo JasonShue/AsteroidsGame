@@ -4,8 +4,8 @@ class Star
   private int myY;
   private color c;
   public Star() {
-    myX = (int)(Math.random()*500);
-    myY = (int)(Math.random()*500);
+    myX = (int)(Math.random()*1000);
+    myY = (int)(Math.random()*1000);
     c = color((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
   }
   public void wowza() {
