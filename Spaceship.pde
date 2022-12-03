@@ -3,8 +3,8 @@ class Spaceship extends Floater  {
     corners = 14;
     xCorners = new int[]{-28, -28, 20, 20, -8, 8, 4, 16, -2, -8, -2, 16, 4, 8};
     yCorners = new int[]{12, -12, -6, 6, 4, 4, 18, 20, 26, -4, -26, -20, -18, -4};
-    myCenterX = 250;
-    myCenterY = 250;
+    myCenterX = 500;
+    myCenterY = 500;
     myXspeed = 0;
     myYspeed = 0;
     myPointDirection = 0;
