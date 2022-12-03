@@ -16,22 +16,18 @@ class Asteroid extends Floater
       if (i < 3) {
         xCorners[i] = (int)(Math.random()*10)+(i*10);
         yCorners[i] = (int)(Math.random()*10)+(i*10) - 30;
-        System.out.println("Q1: " + xCorners[i] + ", " + yCorners[i]);
       }
       if ((i < 6) && (i >= 3)) {
         xCorners[i] = 30 - (int)((Math.random()*10)+((i-3)*10));
         yCorners[i] = (int)(Math.random()*10)+((i-3)*10);
-        System.out.println("Q2: " + xCorners[i] + ", " + yCorners[i]);
       }
       if ((i < 9) && (i >= 6)) {
         xCorners[i] = -1*((int)(Math.random()*10)+((i-6)*10));
         yCorners[i] = 30 - (int)((Math.random()*10)+((i-6)*10));
-        System.out.println("Q3: " + xCorners[i] + ", " + yCorners[i]);
       }
       if (i >= 9) {
         xCorners[i] = (int)(Math.random()*10)+((i-9)*10) - 30;
         yCorners[i] = -1*((int)(Math.random()*10)+((i-9)*10));
-        System.out.println("Q4: " + xCorners[i] + ", " + yCorners[i]);
       }
     }
   }
