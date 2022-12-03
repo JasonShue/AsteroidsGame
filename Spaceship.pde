@@ -1,9 +1,8 @@
-class Spaceship extends Floater  
-{   
+class Spaceship extends Floater  {
   public Spaceship() {
     corners = 14;
-    xCorners = new int[]{-14, -14, 10, 10, -4, 4, 2, 8, -1, -4, -1, 8, 2, 4};
-    yCorners = new int[]{6, -6, -3, 3, 2, 2, 9, 10, 13, -2, -13, -10, -9, -2};
+    xCorners = new int[]{-28, -28, 20, 20, -8, 8, 4, 16, -2, -8, -2, 16, 4, 8};
+    yCorners = new int[]{12, -12, -6, 6, 4, 4, 18, 20, 26, -4, -26, -20, -18, -4};
     myCenterX = 250;
     myCenterY = 250;
     myXspeed = 0;
@@ -42,11 +41,19 @@ class Spaceship extends Floater
     rotate(-1*dRadians);
     translate(-1*(float)myCenterX, -1*(float)myCenterY);
   }
-  
+ 
   public void hyperspace(){
     myXspeed = myYspeed = 0;
     myPointDirection = (int)(Math.random()*360);
     myCenterX = (int)(Math.random()*500);
     myCenterY = (int)(Math.random()*500);
+  }
+  
+  public int getX() {
+    return (int)myCenterX;
+  }
+  
+  public int getY() {
+    return (int)myCenterY;
   }
 }
