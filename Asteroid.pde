@@ -1,8 +1,8 @@
 class Asteroid extends Floater
 {
   private double turnSpeed;
-  public Asteroid() {
-    corners = 12;
+  public Asteroid(int n) {
+    corners = n * 4;
     myColor = 255;
     myCenterX = (int)(Math.random()*1000);
     myCenterY = (int)(Math.random()*1000);
@@ -13,21 +13,21 @@ class Asteroid extends Floater
     xCorners = new int[corners];
     yCorners = new int[corners];
     for (int i = 0; i < corners; i++) {
-      if (i < 3) {
+      if (i < n) {
         xCorners[i] = (int)(Math.random()*10)+(i*10);
-        yCorners[i] = (int)(Math.random()*10)+(i*10) - 30;
+        yCorners[i] = (int)(Math.random()*10)+(i*10) - (10 * n);
       }
-      if ((i < 6) && (i >= 3)) {
-        xCorners[i] = 30 - (int)((Math.random()*10)+((i-3)*10));
-        yCorners[i] = (int)(Math.random()*10)+((i-3)*10);
+      if ((i < (2 * n)) && (i >= n)) {
+        xCorners[i] = (10 * n) - (int)((Math.random()*10)+((i-n)*10));
+        yCorners[i] = (int)(Math.random()*10)+((i-n)*10);
       }
-      if ((i < 9) && (i >= 6)) {
-        xCorners[i] = -1*((int)(Math.random()*10)+((i-6)*10));
-        yCorners[i] = 30 - (int)((Math.random()*10)+((i-6)*10));
+      if ((i < (3 * n)) && (i >= (2 * n))) {
+        xCorners[i] = -1*((int)(Math.random()*10)+((i-(2 * n))*10));
+        yCorners[i] = (10 * n) - (int)((Math.random()*10)+((i-(2 * n))*10));
       }
-      if (i >= 9) {
-        xCorners[i] = (int)(Math.random()*10)+((i-9)*10) - 30;
-        yCorners[i] = -1*((int)(Math.random()*10)+((i-9)*10));
+      if (i >= (3 * n)) {
+        xCorners[i] = (int)(Math.random()*10)+((i-(3 * n))*10) - (10 * n);
+        yCorners[i] = -1*((int)(Math.random()*10)+((i-(3 * n))*10));
       }
     }
   }
@@ -36,13 +36,12 @@ class Asteroid extends Floater
     super.move();
     turn(turnSpeed);
   }
-  
+
   public int getX() {
     return (int)myCenterX;
   }
-  
+
   public int getY() {
     return (int)myCenterY;
   }
 }
-
