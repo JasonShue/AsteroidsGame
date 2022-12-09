@@ -9,6 +9,7 @@ class Star
     c = color((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
   }
   public void wowza() {
+    noStroke();
     fill(c);
     ellipse(myX, myY, 5, 5);
   }
