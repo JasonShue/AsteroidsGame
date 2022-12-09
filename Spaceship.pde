@@ -12,7 +12,8 @@ class Spaceship extends Floater  {
 
   public void show() {
     fill(245, 136, 52);
-
+    stroke(0);
+    
     translate((float)myCenterX, (float)myCenterY);
 
     float dRadians = (float)(myPointDirection*(Math.PI/180));
@@ -52,8 +53,16 @@ class Spaceship extends Floater  {
   public int getX() {
     return (int)myCenterX;
   }
-  
   public int getY() {
     return (int)myCenterY;
+  }
+  public int getXspeed() {
+    return (int)myXspeed;
+  }
+  public int getYspeed() {
+    return (int)myYspeed;
+  }
+  public int getPointDirection() {
+    return (int)myPointDirection;
   }
 }
